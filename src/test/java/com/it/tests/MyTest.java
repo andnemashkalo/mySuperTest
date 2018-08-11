@@ -1,10 +1,11 @@
 package com.it.tests;
 
-import com.it.pages.HomePage;
-import com.it.pages.LoginPage;
 import com.it.utils.UserFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static com.it.tests.BaseTest.app;
+import static com.it.tests.BaseTest.validUser;
 
 public class MyTest {
     @Test
@@ -12,12 +13,9 @@ public class MyTest {
 
         UserFactory.getRandomUser(10).forEach(System.out::println);
 
+        app.login.login(validUser.getLogin(),validUser.getPassword());
+        Assert.assertEquals(app.home.getLabelUserEmail(),validUser.getEmail());
 
-       LoginPage loginPage= new LoginPage();
-       loginPage.login("ittest2","337774a");
-       HomePage homePage=new HomePage();
-       String email=homePage.getLabelUserEmail();
-       Assert.assertEquals(email,"ittest2@i.ua");
 
     }
 }

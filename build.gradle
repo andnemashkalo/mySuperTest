@@ -21,3 +21,10 @@ task chromeTest(type:Test){
         suites "testNG.xml"
     }
 }
+task firefoxTest(type:Test){
+    systemProperty("webdriver.gecko.driver","drivers/geckodriver.exe")
+    systemProperty("driver","gecko")
+    useTestNG{
+        suites "testNG.xml"
+    }
+}

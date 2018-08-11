@@ -1,4 +1,6 @@
 package com.it.steps;
 
-public class HomeSteps {
+import com.it.pages.HomePage;
+
+public class HomeSteps extends HomePage {
 }

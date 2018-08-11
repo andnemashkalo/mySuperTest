@@ -1,4 +1,7 @@
 package com.it.steps;
 
-public class LoginSteps {
+import com.it.pages.LoginPage;
+
+public class LoginSteps extends LoginPage {
+
 }
