@@ -12,7 +12,7 @@ public class MyDriver implements WebDriver {
     private static WebDriver driver;
     private MyDriver() {
     }
-    public static  WebDriver getDriver(){
+    public static  MyDriver getDriver(){
         if(driver==null){
             driver= DriverFactory.getDriver();
             return new MyDriver();
