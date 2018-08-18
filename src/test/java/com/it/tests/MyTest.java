@@ -16,6 +16,5 @@ public class MyTest {
         app.login.login(validUser.getLogin(),validUser.getPassword());
         Assert.assertEquals(app.home.getLabelUserEmail(),validUser.getEmail());
 
-
     }
 }
